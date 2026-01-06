@@ -19,6 +19,11 @@ joined as (
         upper(trim(c.first_name)) as customer_first_name,
         upper(trim(c.last_name)) as customer_last_name,
         o.order_date,
+        date_trunc('day', o.order_date) as order_day,
+        date_trunc('week', o.order_date) as order_week,
+        date_trunc('month', o.order_date) as order_month,
+        date_trunc('quarter', o.order_date) as order_quarter,
+        date_trunc('year', o.order_date) as order_year,
         case
             when upper(trim(p.category)) in ('ELECTRONIC','ELECTRONICS','ELEC') then 'ELECTRONICS'
             when upper(trim(p.category)) in ('CLOTH','CLOTHING','CLOTHES') then 'CLOTHING'
@@ -36,7 +41,7 @@ joined as (
 aggregated as (
 
     select
-        date_trunc('month', order_date) as order_month,
+        order_month,
         category as category,
         count(distinct order_id) as nb_orders,
         sum(quantity) as total_quantity,
@@ -45,4 +50,9 @@ aggregated as (
     group by 1, 2
 )
 
-select * from aggregated
+select 
+    *,
+    null as customer_region, -- Future use
+    null as customer_locale, -- Future use
+    null as discount_amount -- Mandatory (data contract)
+from aggregated
