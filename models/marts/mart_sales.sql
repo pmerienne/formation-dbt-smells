@@ -3,7 +3,7 @@ with orders as (
 ),
 
 products as (
-    select * from {{ ref('stg_products') }}
+    select * from {{ ref('int_products') }}
 ),
 
 customers as (
