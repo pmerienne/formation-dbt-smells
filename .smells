@@ -2,3 +2,4 @@ Smells
 - Duplicate Code: Email normalization logic (lower + trim) duplicated in models/marts/mart_customers.sql, models/marts/mart_sales.sql, and models/marts/mart_sales_performance_analysis.sql
 - Duplicate Code: Name formatting logic (upper + trim) duplicated in models/marts/mart_customers.sql and models/marts/mart_sales.sql
 - Duplicate Code: Category normalization CASE statement duplicated in models/marts/mart_sales.sql and models/marts/mart_sales_performance_analysis.sql
+- Lazy Model: models/staging/stg_orders_clean.sql - This model simply selects all columns from stg_orders without any transformation, enrichment, or business logic. It adds no value and is only used by mart_sales.
