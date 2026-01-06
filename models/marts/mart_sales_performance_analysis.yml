@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mart_sales_performance_analysis
+    description: >
+      Ce modèle analyse les performances des ventes en calculant des métriques agrégées, 
+      des tendances et des indicateurs clés pour les catégories de produits et les segments clients.
+    columns:
+      - name: product_category
+        description: La catégorie du produit vendu.
+      - name: customer_segment
+        description: Le segment auquel appartient le client.
+      - name: sale_month
+        description: Le mois de la vente (troncature à la granularité mensuelle).
+      - name: total_revenue
+        description: Le revenu total généré pour une catégorie de produit et un segment client au cours d'un mois.
+      - name: total_quantity
+        description: La quantité totale de produits vendus pour une catégorie et un segment client au cours d'un mois.
+      - name: previous_month_revenue
+        description: Le revenu total du mois précédent pour une catégorie de produit et un segment client.
+      - name: avg_discount
+        description: La remise moyenne appliquée aux ventes pour une catégorie de produit et un segment client.
+      - name: unique_customers
+        description: Le nombre de clients uniques ayant effectué des achats pour une catégorie de produit et un segment client.

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: mart_customers
+    description: "This mart aggregates customer data, including their first order and total spending."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: "First name of the customer."
+        tests:
+          - not_null
+      - name: last_name
+        description: "Last name of the customer."
+        tests:
+          - not_null
+      - name: signup_date
+        description: "The date the customer signed up."
+        tests:
+          - not_null
+      - name: email
+        description: "Email address of the customer."
+        tests:
+          - not_null
+          - unique
+      - name: first_order_date
+        description: "The date of the customer's first order."
+        tests:
+          - not_null
+      - name: total_orders
+        description: "The total number of orders placed by the customer."
+        tests:
+          - not_null
+      - name: total_spent
+        description: "The total amount spent by the customer."
+        tests:
+          - not_null

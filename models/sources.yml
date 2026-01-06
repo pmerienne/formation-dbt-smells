@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: megashop
+    description: "Données sources issues des fichiers CSV (seed)"
+    schema: main
+    tables:
+      - name: orders
+        description: "Commandes passées par les clients"
+        columns:
+          - name: order_id
+            description: "Identifiant unique de la commande"
+          - name: customer_id
+            description: "Référence au client"
+          - name: product_id
+            description: "Référence au produit"
+
+      - name: customers
+        description: "Liste des clients"
+        columns:
+          - name: customer_id
+            description: "Identifiant unique du client"
+          - name: email
+            description: "Email du client"
+          - name: first_name
+            description: "Prénom du client"
+          - name: last_name
+            description: "Nom de famille du client"
+          - name: signup_date
+            description: "Date de création du compte client"
+
+      - name: products
+        description: "Catalogue produits"
+        columns:
+          - name: product_id
+            description: "Identifiant unique du produit"
+          - name: name
+            description: "Nom du produit"
+          - name: category
+            description: "Catégorie du produit"

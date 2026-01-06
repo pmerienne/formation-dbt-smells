@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_sales
+    description: "This mart aggregates sales data by month and product category."
+    columns:
+      - name: order_month
+        description: "The month in which the orders were placed."
+      - name: category
+        description: "The category of the products sold."
+      - name: nb_orders
+        description: "The number of unique orders placed in the month."
+      - name: total_quantity
+        description: "The total quantity of products sold in the month."
+      - name: total_revenue
+        description: "The total revenue generated in the month."

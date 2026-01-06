@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "This staging model prepares customer data for downstream transformations."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+      - name: email
+        description: "Email address of the customer."
+      - name: first_name
+        description: "First name of the customer, capitalized."
+      - name: last_name
+        description: "Last name of the customer, capitalized."
+      - name: signup_date
+        description: "The date the customer signed up."

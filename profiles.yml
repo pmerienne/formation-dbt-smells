@@ -1,0 +1,7 @@
+megashop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: .db/megashop.duckdb
+      threads: 1

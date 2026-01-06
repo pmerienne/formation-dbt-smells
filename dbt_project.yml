@@ -1,0 +1,25 @@
+name: 'megashop_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'megashop'
+
+# Où se trouvent les modèles dbt (par défaut dans /models)
+model-paths: ["models"]
+
+# Données à charger via `dbt seed`
+seed-paths: ["seeds"]
+
+# Tests, snapshots, analyses, macros...
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Documentation
+docs-paths: ["docs"]
+
+# Configurations par défaut
+models:
+  megashop_dbt:
+    +materialized: table

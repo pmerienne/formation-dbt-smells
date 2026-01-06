@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "This staging model prepares order data for downstream transformations."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+      - name: customer_id
+        description: "Unique identifier for the customer who placed the order."
+      - name: product_id
+        description: "Unique identifier for the product in the order."
+      - name: order_date
+        description: "The date the order was placed."
+      - name: quantity
+        description: "The quantity of the product ordered."
+      - name: total_amount
+        description: "The total amount for the order."

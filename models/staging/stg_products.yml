@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: "This staging model prepares product data for downstream transformations."
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+      - name: name
+        description: "Name of the product."
+      - name: category
+        description: "Category to which the product belongs."
+      - name: price
+        description: "Price of the product."

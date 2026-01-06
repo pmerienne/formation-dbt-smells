@@ -1,0 +1,10 @@
+[project]
+name = "formation-dbt-refactoring"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "dbt-core>=1.9.4",
+    "dbt-duckdb>=1.9.2",
+    "duckdb>=1.2.2",
+]
